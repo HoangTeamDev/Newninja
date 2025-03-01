@@ -319,7 +319,7 @@ public class CharacterMove : MonoBehaviour
         if (IsGrounded() && _countJump == 0)
         {
             _spineController.PlayAnimation(-2);
-            _rb.AddForce(new Vector2(0, 9), ForceMode2D.Impulse);
+            _rb.AddForce(new Vector2(0,11), ForceMode2D.Impulse);
             GameServer.gI().Charmove(2, (short)dir);
             _countJump++;
             return;
@@ -352,7 +352,7 @@ public class CharacterMove : MonoBehaviour
         if (_countJump == 1 && !IsGrounded())
         {
             _spineController.PlayAnimation(-3, true);
-            _rb.AddForce(new Vector2(0, 9), ForceMode2D.Impulse);
+            _rb.AddForce(new Vector2(0, 11), ForceMode2D.Impulse);
             GameServer.gI().Charmove(3, (short)dir);
             _countJump++;
         }

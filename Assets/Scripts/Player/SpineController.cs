@@ -28,13 +28,13 @@ public class SpineController : MonoBehaviour
         switch (id)
         {
             case 0:
-                return "idle";
+                return PlayerAnimationState.PlayerIdle.ToString();
             case -1:
-                return "run";
+                return PlayerAnimationState.PlayerRun.ToString();
             case -2:
-                return "jump";
+                return PlayerAnimationState.PlayerJump.ToString();
             case -3:
-                return "db jump2";
+                return PlayerAnimationState.PlayerDoubleJump.ToString();
             case -4:
                 return PlayerAnimationState.PlayerFall.ToString();
             case -5:
